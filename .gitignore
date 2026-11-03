@@ -1,0 +1,13 @@
+.env
+.env.local
+.venv/
+__pycache__/
+node_modules/
+.next/
+*.wav
+*.webm
+*.db
+last.wav
+last_raw.webm
+kirana.db
+.llm_cache.json
