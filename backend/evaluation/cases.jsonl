@@ -1,0 +1,59 @@
+{"id": "c01", "tag": "bengali", "turns": ["আমার দুই কেজি আটা লাগবে", "হ্যাঁ"], "expect": {"kind": "commit", "lines": [{"product_id": "atta", "qty": 2, "unit": "kg"}]}}
+{"id": "c02", "tag": "bengali", "turns": ["এক কেজি চিনি আর আধা কেজি নুন", "হ্যাঁ"], "expect": {"kind": "commit", "lines": [{"product_id": "sugar", "qty": 1, "unit": "kg"}, {"product_id": "salt", "qty": 0.5, "unit": "kg"}]}}
+{"id": "c03", "tag": "bengali", "turns": ["তিন কেজি চাল", "হ্যাঁ"], "expect": {"kind": "commit", "lines": [{"product_id": "rice", "qty": 3, "unit": "kg"}]}}
+{"id": "c04", "tag": "bengali", "turns": ["দেড় কেজি পেঁয়াজ আর দুই কেজি আলু", "হ্যাঁ"], "expect": {"kind": "commit", "lines": [{"product_id": "onion", "qty": 1.5, "unit": "kg"}, {"product_id": "potato", "qty": 2, "unit": "kg"}]}}
+{"id": "c05", "tag": "bengali", "turns": ["একটা সাবান", "হ্যাঁ"], "expect": {"kind": "commit", "lines": [{"product_id": "soap", "qty": 1, "unit": "piece"}]}}
+{"id": "c06", "tag": "bengali", "turns": ["এক প্যাকেট চা পাতা", "হ্যাঁ"], "expect": {"kind": "commit", "lines": [{"product_id": "tea", "qty": 1, "unit": "packet"}]}}
+{"id": "c07", "tag": "bengali", "turns": ["দুই প্যাকেট বিস্কুট আর এক প্যাকেট দুধ", "হ্যাঁ"], "expect": {"kind": "commit", "lines": [{"product_id": "biscuit", "qty": 2, "unit": "packet"}, {"product_id": "milk", "qty": 1, "unit": "packet"}]}}
+{"id": "c08", "tag": "bengali", "turns": ["এক ডজন ডিম", "হ্যাঁ"], "expect": {"kind": "commit", "lines": [{"product_id": "egg", "qty": 12, "unit": "piece"}]}}
+{"id": "c09", "tag": "bengali", "turns": ["পাঁচ কেজি আটা আর পাঁচ কেজি চাল", "হ্যাঁ"], "expect": {"kind": "commit", "lines": [{"product_id": "atta", "qty": 5, "unit": "kg"}, {"product_id": "rice", "qty": 5, "unit": "kg"}]}}
+{"id": "c10", "tag": "bengali", "turns": ["আড়াই কেজি চিনি", "হ্যাঁ"], "expect": {"kind": "commit", "lines": [{"product_id": "sugar", "qty": 2.5, "unit": "kg"}]}}
+{"id": "c11", "tag": "bengali", "turns": ["সরষের তেল দুই লিটার", "হ্যাঁ"], "expect": {"kind": "commit", "lines": [{"product_id": "mustard_oil", "qty": 2, "unit": "litre"}]}}
+{"id": "c12", "tag": "bengali", "turns": ["এক লিটার সানফ্লাওয়ার তেল", "হ্যাঁ"], "expect": {"kind": "commit", "lines": [{"product_id": "sunflower_oil", "qty": 1, "unit": "litre"}]}}
+{"id": "c13", "tag": "bengali", "turns": ["মসুর ডাল এক কেজি", "হ্যাঁ"], "expect": {"kind": "commit", "lines": [{"product_id": "masoor_dal", "qty": 1, "unit": "kg"}]}}
+{"id": "c14", "tag": "bengali", "turns": ["মুগ ডাল আধা কেজি", "হ্যাঁ"], "expect": {"kind": "commit", "lines": [{"product_id": "moong_dal", "qty": 0.5, "unit": "kg"}]}}
+{"id": "c15", "tag": "bengali", "turns": ["পাঁচশো গ্রাম আটা", "হ্যাঁ"], "expect": {"kind": "commit", "lines": [{"product_id": "atta", "qty": 0.5, "unit": "kg"}]}}
+{"id": "c16", "tag": "bengali", "turns": ["আড়াইশো গ্রাম নুন", "হ্যাঁ"], "expect": {"kind": "commit", "lines": [{"product_id": "salt", "qty": 0.25, "unit": "kg"}]}}
+{"id": "c17", "tag": "bengali", "turns": ["আমার পাঁচ কেজি আটা আর পাঁচ লিটার সরষের তেল লাগবে", "হ্যাঁ"], "expect": {"kind": "commit", "lines": [{"product_id": "atta", "qty": 5, "unit": "kg"}, {"product_id": "mustard_oil", "qty": 5, "unit": "litre"}]}}
+{"id": "c18", "tag": "benglish", "turns": ["amar 2 kilo atta lagbe", "haan"], "expect": {"kind": "commit", "lines": [{"product_id": "atta", "qty": 2, "unit": "kg"}]}}
+{"id": "c19", "tag": "benglish", "turns": ["1 kilo chini ar 1 packet cha pata", "haan"], "expect": {"kind": "commit", "lines": [{"product_id": "sugar", "qty": 1, "unit": "kg"}, {"product_id": "tea", "qty": 1, "unit": "packet"}]}}
+{"id": "c20", "tag": "benglish", "turns": ["ek litre sorshe tel", "haan"], "expect": {"kind": "commit", "lines": [{"product_id": "mustard_oil", "qty": 1, "unit": "litre"}]}}
+{"id": "c21", "tag": "benglish", "turns": ["3 kg alu ar 2 kg peyaj", "haan"], "expect": {"kind": "commit", "lines": [{"product_id": "potato", "qty": 3, "unit": "kg"}, {"product_id": "onion", "qty": 2, "unit": "kg"}]}}
+{"id": "c22", "tag": "benglish", "turns": ["ek dozen dim", "haan"], "expect": {"kind": "commit", "lines": [{"product_id": "egg", "qty": 12, "unit": "piece"}]}}
+{"id": "c23", "tag": "benglish", "turns": ["dui kilo chal", "haan"], "expect": {"kind": "commit", "lines": [{"product_id": "rice", "qty": 2, "unit": "kg"}]}}
+{"id": "c24", "tag": "benglish", "turns": ["ek ta sabun", "haan"], "expect": {"kind": "commit", "lines": [{"product_id": "soap", "qty": 1, "unit": "piece"}]}}
+{"id": "c25", "tag": "benglish", "turns": ["dedh kilo atta", "haan"], "expect": {"kind": "commit", "lines": [{"product_id": "atta", "qty": 1.5, "unit": "kg"}]}}
+{"id": "c26", "tag": "benglish", "turns": ["aadha kilo masur dal", "haan"], "expect": {"kind": "commit", "lines": [{"product_id": "masoor_dal", "qty": 0.5, "unit": "kg"}]}}
+{"id": "c27", "tag": "hinglish", "turns": ["do kilo aata aur ek kilo cheeni", "haan"], "expect": {"kind": "commit", "lines": [{"product_id": "atta", "qty": 2, "unit": "kg"}, {"product_id": "sugar", "qty": 1, "unit": "kg"}]}}
+{"id": "c28", "tag": "hinglish", "turns": ["teen kilo chawal", "haan"], "expect": {"kind": "commit", "lines": [{"product_id": "rice", "qty": 3, "unit": "kg"}]}}
+{"id": "c29", "tag": "hinglish", "turns": ["ek kilo namak aur do packet biscuit", "haan"], "expect": {"kind": "commit", "lines": [{"product_id": "salt", "qty": 1, "unit": "kg"}, {"product_id": "biscuit", "qty": 2, "unit": "packet"}]}}
+{"id": "c30", "tag": "hinglish", "turns": ["dedh kilo pyaaz", "haan"], "expect": {"kind": "commit", "lines": [{"product_id": "onion", "qty": 1.5, "unit": "kg"}]}}
+{"id": "c31", "tag": "hinglish", "turns": ["ek packet doodh", "haan"], "expect": {"kind": "commit", "lines": [{"product_id": "milk", "qty": 1, "unit": "packet"}]}}
+{"id": "c32", "tag": "hinglish", "turns": ["दो किलो आटा और एक किलो चीनी", "हाँ"], "expect": {"kind": "commit", "lines": [{"product_id": "atta", "qty": 2, "unit": "kg"}, {"product_id": "sugar", "qty": 1, "unit": "kg"}]}}
+{"id": "c33", "tag": "hinglish", "turns": ["तीन किलो चावल", "हाँ"], "expect": {"kind": "commit", "lines": [{"product_id": "rice", "qty": 3, "unit": "kg"}]}}
+{"id": "c34", "tag": "mixed", "turns": ["kalke 2 kilo atta ar ek litre sorshe tel lagbe", "haan"], "expect": {"kind": "commit", "lines": [{"product_id": "atta", "qty": 2, "unit": "kg"}, {"product_id": "mustard_oil", "qty": 1, "unit": "litre"}]}}
+{"id": "c35", "tag": "mixed", "turns": ["amar পাঁচ kg চিনি", "হ্যাঁ"], "expect": {"kind": "commit", "lines": [{"product_id": "sugar", "qty": 5, "unit": "kg"}]}}
+{"id": "c36", "tag": "mixed", "turns": ["দু kilo আলু আর ek kilo পেঁয়াজ", "হ্যাঁ"], "expect": {"kind": "commit", "lines": [{"product_id": "potato", "qty": 2, "unit": "kg"}, {"product_id": "onion", "qty": 1, "unit": "kg"}]}}
+{"id": "c37", "tag": "clarified", "turns": ["আমার এক লিটার তেল লাগবে", "সরষের তেল", "হ্যাঁ"], "expect": {"kind": "commit", "lines": [{"product_id": "mustard_oil", "qty": 1, "unit": "litre"}]}}
+{"id": "c38", "tag": "clarified", "turns": ["ek litre tel", "sunflower oil", "haan"], "expect": {"kind": "commit", "lines": [{"product_id": "sunflower_oil", "qty": 1, "unit": "litre"}]}}
+{"id": "c39", "tag": "clarified", "turns": ["দুই কেজি ডাল", "মসুর ডাল", "হ্যাঁ"], "expect": {"kind": "commit", "lines": [{"product_id": "masoor_dal", "qty": 2, "unit": "kg"}]}}
+{"id": "c40", "tag": "clarified", "turns": ["ek kilo dal chahiye", "moong dal", "haan"], "expect": {"kind": "commit", "lines": [{"product_id": "moong_dal", "qty": 1, "unit": "kg"}]}}
+{"id": "c41", "tag": "clarified", "turns": ["এক কেজি আটা আর দুই লিটার তেল", "সানফ্লাওয়ার", "হ্যাঁ"], "expect": {"kind": "commit", "lines": [{"product_id": "atta", "qty": 1, "unit": "kg"}, {"product_id": "sunflower_oil", "qty": 2, "unit": "litre"}]}}
+{"id": "c42", "tag": "clarified", "turns": ["আমার দুই কেজি আটা আর পাঁচ কেজি তেল", "সরষের তেল", "পাঁচ লিটার", "হ্যাঁ"], "expect": {"kind": "commit", "lines": [{"product_id": "atta", "qty": 2, "unit": "kg"}, {"product_id": "mustard_oil", "qty": 5, "unit": "litre"}]}}
+{"id": "c43", "tag": "negative", "turns": ["এক লিটার তেল"], "expect": {"kind": "clarify", "line_status": "ambiguous"}}
+{"id": "c44", "tag": "negative", "turns": ["দুই কেজি ডাল", "হ্যাঁ"], "expect": {"kind": "clarify", "line_status": "ambiguous"}}
+{"id": "c45", "tag": "negative", "turns": ["একটা ল্যাপটপ"], "expect": {"kind": "clarify", "line_status": "unknown"}}
+{"id": "c46", "tag": "negative", "turns": ["আমার চিনি লাগবে", "হ্যাঁ"], "expect": {"kind": "clarify", "line_status": "bad_qty"}}
+{"id": "c47", "tag": "negative", "turns": ["দুই লিটার আটা"], "expect": {"kind": "clarify", "line_status": "unit_mismatch"}}
+{"id": "c48", "tag": "negative", "turns": ["পাঁচশো কেজি আটা", "হ্যাঁ"], "expect": {"kind": "clarify", "line_status": "out_of_stock"}}
+{"id": "c49", "tag": "negative", "turns": ["এক কেজি আটা আর একটা টিভি", "হ্যাঁ"], "expect": {"kind": "clarify", "line_status": "unknown"}}
+{"id": "c50", "tag": "negative", "turns": ["এক লিটার নুন"], "expect": {"kind": "clarify", "line_status": "unit_mismatch"}}
+{"id": "c51", "tag": "negative", "turns": ["দুই কেজি আটা আর এক লিটার তেল", "হ্যাঁ"], "expect": {"kind": "clarify", "line_status": "ambiguous"}}
+{"id": "c52", "tag": "negative", "turns": ["ek litre tel chahiye", "haan"], "expect": {"kind": "clarify", "line_status": "ambiguous"}}
+{"id": "c53", "tag": "negative", "turns": ["एक लीटर तेल"], "expect": {"kind": "clarify", "line_status": "ambiguous"}}
+{"id": "c54", "tag": "cancel", "turns": ["দুই কেজি আটা", "না"], "expect": {"kind": "cancel"}}
+{"id": "c55", "tag": "cancel", "turns": ["এক কেজি চিনি", "বাদ দাও"], "expect": {"kind": "cancel"}}
+{"id": "c56", "tag": "cancel", "turns": ["ek kilo chini", "cancel"], "expect": {"kind": "cancel"}}
+{"id": "c57", "tag": "noise", "turns": ["হ্যাঁ"], "expect": {"kind": "none"}}
+{"id": "c58", "tag": "noise", "turns": ["আজকে আবহাওয়া কেমন"], "expect": {"kind": "none"}}
+{"id": "c59", "tag": "noise", "turns": ["হ্যালো"], "expect": {"kind": "none"}}
