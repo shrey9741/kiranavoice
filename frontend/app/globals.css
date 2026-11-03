@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #eef2ee;
+  --paper-edge: #dfe6e0;
+  --rule: #b7cae0;
+  --margin: #c8372d;
+  --ink: #17264b;
+  --ink-soft: #4a5878;
+  --turmeric: #e9a820;
+  --stamp: #5a3c8f;
+  --danger: #b3261e;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: var(--paper-edge);
+  color: var(--ink);
+  font-family: var(--font-ui), system-ui, sans-serif;
+}
+
+.font-hand {
+  font-family: var(--font-hand), var(--font-ui), serif;
+}
+
+/* One ledger line = 40px. Every text row must be 40px tall to sit on a rule. */
+.ledger {
+  position: relative;
+  background-color: var(--paper);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 39px,
+    var(--rule) 39px,
+    var(--rule) 40px
+  );
+}
+
+.ledger::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 3.25rem;
+  width: 2px;
+  background: var(--margin);
+  opacity: 0.7;
+}
+
+.row {
+  height: 40px;
+  line-height: 40px;
+}
+
+.stamp {
+  border: 3px solid var(--stamp);
+  color: var(--stamp);
+  border-radius: 6px;
+  padding: 0 0.75rem;
+  line-height: 38px;
+  font-size: 1.25rem;
+  transform: rotate(-8deg);
+  animation: stamp-in 260ms cubic-bezier(0.2, 1.4, 0.4, 1) both;
+}
+
+@keyframes stamp-in {
+  from {
+    transform: rotate(-8deg) scale(1.8);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(-8deg) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes ring {
+  from {
+    box-shadow: 0 0 0 0 rgba(233, 168, 32, 0.55);
+  }
+  to {
+    box-shadow: 0 0 0 22px rgba(233, 168, 32, 0);
+  }
+}
+
+.mic-live {
+  animation: ring 1.4s ease-out infinite;
+}
+
+button:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stamp,
+  .mic-live {
+    animation: none;
+  }
+}
