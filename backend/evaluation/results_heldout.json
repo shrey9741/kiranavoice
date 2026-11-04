@@ -1,0 +1,2092 @@
+{
+  "improved": {
+    "summary": {
+      "mode": "improved",
+      "order_accuracy": [
+        17,
+        19
+      ],
+      "task_completion": [
+        17,
+        19
+      ],
+      "clarification_correct": [
+        7,
+        7
+      ],
+      "unsafe_commits": [
+        0,
+        11
+      ],
+      "overall": [
+        28,
+        30
+      ],
+      "latency_p50": 0.8957593999803066,
+      "latency_p95": 2.7288514000247233
+    },
+    "results": [
+      {
+        "id": "h01",
+        "tag": "bengali",
+        "kind": "commit",
+        "turns": [
+          "ভাই তিন কেজি আলু আর এক কেজি পেঁয়াজ দিন",
+          "হ্যাঁ"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "potato",
+              "qty": 3,
+              "unit": "kg"
+            },
+            {
+              "product_id": "onion",
+              "qty": 1,
+              "unit": "kg"
+            }
+          ]
+        },
+        "passed": true,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "potato",
+              "qty": 3.0,
+              "unit": "kg"
+            },
+            {
+              "product_id": "onion",
+              "qty": 1.0,
+              "unit": "kg"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [
+          "ok",
+          "ok"
+        ],
+        "error": null
+      },
+      {
+        "id": "h02",
+        "tag": "bengali",
+        "kind": "commit",
+        "turns": [
+          "চার কেজি চাল একটু তাড়াতাড়ি দাও",
+          "ঠিক আছে"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "rice",
+              "qty": 4,
+              "unit": "kg"
+            }
+          ]
+        },
+        "passed": true,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "rice",
+              "qty": 4.0,
+              "unit": "kg"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [
+          "ok"
+        ],
+        "error": null
+      },
+      {
+        "id": "h03",
+        "tag": "bengali",
+        "kind": "commit",
+        "turns": [
+          "আড়াই কেজি আটা আর আধা কেজি মুগ ডাল",
+          "হ্যাঁ"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "atta",
+              "qty": 2.5,
+              "unit": "kg"
+            },
+            {
+              "product_id": "moong_dal",
+              "qty": 0.5,
+              "unit": "kg"
+            }
+          ]
+        },
+        "passed": true,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "atta",
+              "qty": 2.5,
+              "unit": "kg"
+            },
+            {
+              "product_id": "moong_dal",
+              "qty": 0.5,
+              "unit": "kg"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [
+          "ok",
+          "ok"
+        ],
+        "error": null
+      },
+      {
+        "id": "h04",
+        "tag": "bengali",
+        "kind": "commit",
+        "turns": [
+          "দুটো সাবান আর তিন প্যাকেট দুধ লাগবে",
+          "হ্যাঁ"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "soap",
+              "qty": 2,
+              "unit": "piece"
+            },
+            {
+              "product_id": "milk",
+              "qty": 3,
+              "unit": "packet"
+            }
+          ]
+        },
+        "passed": true,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "soap",
+              "qty": 2.0,
+              "unit": "piece"
+            },
+            {
+              "product_id": "milk",
+              "qty": 3.0,
+              "unit": "packet"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [
+          "ok",
+          "ok"
+        ],
+        "error": null
+      },
+      {
+        "id": "h05",
+        "tag": "bengali",
+        "kind": "commit",
+        "turns": [
+          "আধা ডজন ডিম",
+          "হ্যাঁ"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "egg",
+              "qty": 6,
+              "unit": "piece"
+            }
+          ]
+        },
+        "passed": true,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "egg",
+              "qty": 6.0,
+              "unit": "piece"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [
+          "ok"
+        ],
+        "error": null
+      },
+      {
+        "id": "h06",
+        "tag": "bengali",
+        "kind": "commit",
+        "turns": [
+          "দুই লিটার সরষের তেল আর পাঁচ কেজি চিনি দিয়ে দিন",
+          "হ্যাঁ"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "mustard_oil",
+              "qty": 2,
+              "unit": "litre"
+            },
+            {
+              "product_id": "sugar",
+              "qty": 5,
+              "unit": "kg"
+            }
+          ]
+        },
+        "passed": true,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "mustard_oil",
+              "qty": 2.0,
+              "unit": "litre"
+            },
+            {
+              "product_id": "sugar",
+              "qty": 5.0,
+              "unit": "kg"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [
+          "ok",
+          "ok"
+        ],
+        "error": null
+      },
+      {
+        "id": "h07",
+        "tag": "benglish",
+        "kind": "commit",
+        "turns": [
+          "dada 2 kilo chal ar 1 kilo nun den",
+          "haan"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "rice",
+              "qty": 2,
+              "unit": "kg"
+            },
+            {
+              "product_id": "salt",
+              "qty": 1,
+              "unit": "kg"
+            }
+          ]
+        },
+        "passed": true,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "rice",
+              "qty": 2.0,
+              "unit": "kg"
+            },
+            {
+              "product_id": "salt",
+              "qty": 1.0,
+              "unit": "kg"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [
+          "ok",
+          "ok"
+        ],
+        "error": null
+      },
+      {
+        "id": "h08",
+        "tag": "benglish",
+        "kind": "commit",
+        "turns": [
+          "ek packet biscuit ar duto sabun",
+          "ok"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "biscuit",
+              "qty": 1,
+              "unit": "packet"
+            },
+            {
+              "product_id": "soap",
+              "qty": 2,
+              "unit": "piece"
+            }
+          ]
+        },
+        "passed": true,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "biscuit",
+              "qty": 1.0,
+              "unit": "packet"
+            },
+            {
+              "product_id": "soap",
+              "qty": 2.0,
+              "unit": "piece"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [
+          "ok",
+          "ok"
+        ],
+        "error": null
+      },
+      {
+        "id": "h09",
+        "tag": "benglish",
+        "kind": "commit",
+        "turns": [
+          "arai kilo alu",
+          "haan"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "potato",
+              "qty": 2.5,
+              "unit": "kg"
+            }
+          ]
+        },
+        "passed": true,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "potato",
+              "qty": 2.5,
+              "unit": "kg"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [
+          "ok"
+        ],
+        "error": null
+      },
+      {
+        "id": "h10",
+        "tag": "benglish",
+        "kind": "commit",
+        "turns": [
+          "tin kilo peyaj ar 500 gram chini",
+          "yes"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "onion",
+              "qty": 3,
+              "unit": "kg"
+            },
+            {
+              "product_id": "sugar",
+              "qty": 0.5,
+              "unit": "kg"
+            }
+          ]
+        },
+        "passed": true,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "onion",
+              "qty": 3.0,
+              "unit": "kg"
+            },
+            {
+              "product_id": "sugar",
+              "qty": 0.5,
+              "unit": "kg"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [
+          "ok",
+          "ok"
+        ],
+        "error": null
+      },
+      {
+        "id": "h11",
+        "tag": "benglish",
+        "kind": "commit",
+        "turns": [
+          "sunflower tel ek litre dao",
+          "haan"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "sunflower_oil",
+              "qty": 1,
+              "unit": "litre"
+            }
+          ]
+        },
+        "passed": false,
+        "n_orders": 0,
+        "orders": [],
+        "last_status": "pending",
+        "last_line_statuses": [
+          "ambiguous"
+        ],
+        "error": null
+      },
+      {
+        "id": "h12",
+        "tag": "hinglish",
+        "kind": "commit",
+        "turns": [
+          "bhaiya do kilo chawal aur ek kilo namak dena",
+          "haan"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "rice",
+              "qty": 2,
+              "unit": "kg"
+            },
+            {
+              "product_id": "salt",
+              "qty": 1,
+              "unit": "kg"
+            }
+          ]
+        },
+        "passed": true,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "rice",
+              "qty": 2.0,
+              "unit": "kg"
+            },
+            {
+              "product_id": "salt",
+              "qty": 1.0,
+              "unit": "kg"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [
+          "ok",
+          "ok"
+        ],
+        "error": null
+      },
+      {
+        "id": "h13",
+        "tag": "hinglish",
+        "kind": "commit",
+        "turns": [
+          "teen packet chai aur ek dozen anda",
+          "haan"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "tea",
+              "qty": 3,
+              "unit": "packet"
+            },
+            {
+              "product_id": "egg",
+              "qty": 12,
+              "unit": "piece"
+            }
+          ]
+        },
+        "passed": true,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "tea",
+              "qty": 3.0,
+              "unit": "packet"
+            },
+            {
+              "product_id": "egg",
+              "qty": 12.0,
+              "unit": "piece"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [
+          "ok",
+          "ok"
+        ],
+        "error": null
+      },
+      {
+        "id": "h14",
+        "tag": "hinglish",
+        "kind": "commit",
+        "turns": [
+          "मुझे एक किलो प्याज और दो किलो आलू चाहिए",
+          "हाँ"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "onion",
+              "qty": 1,
+              "unit": "kg"
+            },
+            {
+              "product_id": "potato",
+              "qty": 2,
+              "unit": "kg"
+            }
+          ]
+        },
+        "passed": true,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "onion",
+              "qty": 1.0,
+              "unit": "kg"
+            },
+            {
+              "product_id": "potato",
+              "qty": 2.0,
+              "unit": "kg"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [
+          "ok",
+          "ok"
+        ],
+        "error": null
+      },
+      {
+        "id": "h15",
+        "tag": "mixed",
+        "kind": "commit",
+        "turns": [
+          "amar লাগবে দুই kilo atta ar ek packet দুধ",
+          "হ্যাঁ"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "atta",
+              "qty": 2,
+              "unit": "kg"
+            },
+            {
+              "product_id": "milk",
+              "qty": 1,
+              "unit": "packet"
+            }
+          ]
+        },
+        "passed": true,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "atta",
+              "qty": 2.0,
+              "unit": "kg"
+            },
+            {
+              "product_id": "milk",
+              "qty": 1.0,
+              "unit": "packet"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [
+          "ok",
+          "ok"
+        ],
+        "error": null
+      },
+      {
+        "id": "h16",
+        "tag": "mixed",
+        "kind": "commit",
+        "turns": [
+          "দুই কেজি আটা না না তিন কেজি আটা দিন",
+          "হ্যাঁ"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "atta",
+              "qty": 3,
+              "unit": "kg"
+            }
+          ]
+        },
+        "passed": true,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "atta",
+              "qty": 3.0,
+              "unit": "kg"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [
+          "ok"
+        ],
+        "error": null
+      },
+      {
+        "id": "h17",
+        "tag": "clarified",
+        "kind": "commit",
+        "turns": [
+          "এক লিটার তেল দাও ভাই",
+          "সানফ্লাওয়ারটাই দাও",
+          "হ্যাঁ"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "sunflower_oil",
+              "qty": 1,
+              "unit": "litre"
+            }
+          ]
+        },
+        "passed": false,
+        "n_orders": 0,
+        "orders": [],
+        "last_status": "pending",
+        "last_line_statuses": [
+          "unknown"
+        ],
+        "error": null
+      },
+      {
+        "id": "h18",
+        "tag": "clarified",
+        "kind": "commit",
+        "turns": [
+          "dui kilo dal",
+          "masur",
+          "haan"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "masoor_dal",
+              "qty": 2,
+              "unit": "kg"
+            }
+          ]
+        },
+        "passed": true,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "masoor_dal",
+              "qty": 2.0,
+              "unit": "kg"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [
+          "ok"
+        ],
+        "error": null
+      },
+      {
+        "id": "h19",
+        "tag": "clarified",
+        "kind": "commit",
+        "turns": [
+          "ek kilo atta aur do litre tel",
+          "sarson ka tel",
+          "haan"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "atta",
+              "qty": 1,
+              "unit": "kg"
+            },
+            {
+              "product_id": "mustard_oil",
+              "qty": 2,
+              "unit": "litre"
+            }
+          ]
+        },
+        "passed": true,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "atta",
+              "qty": 1.0,
+              "unit": "kg"
+            },
+            {
+              "product_id": "mustard_oil",
+              "qty": 2.0,
+              "unit": "litre"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [
+          "ok",
+          "ok"
+        ],
+        "error": null
+      },
+      {
+        "id": "h20",
+        "tag": "negative",
+        "kind": "clarify",
+        "turns": [
+          "পাঁচ কেজি ডাল দিন",
+          "হ্যাঁ"
+        ],
+        "expected": {
+          "kind": "clarify",
+          "line_status": "ambiguous"
+        },
+        "passed": true,
+        "n_orders": 0,
+        "orders": [],
+        "last_status": "pending",
+        "last_line_statuses": [
+          "ambiguous"
+        ],
+        "error": null
+      },
+      {
+        "id": "h21",
+        "tag": "negative",
+        "kind": "clarify",
+        "turns": [
+          "ভাই এক কেজি পনির দাও"
+        ],
+        "expected": {
+          "kind": "clarify",
+          "line_status": "unknown"
+        },
+        "passed": true,
+        "n_orders": 0,
+        "orders": [],
+        "last_status": "pending",
+        "last_line_statuses": [
+          "unknown"
+        ],
+        "error": null
+      },
+      {
+        "id": "h22",
+        "tag": "negative",
+        "kind": "clarify",
+        "turns": [
+          "do litre atta chahiye",
+          "haan"
+        ],
+        "expected": {
+          "kind": "clarify",
+          "line_status": "unit_mismatch"
+        },
+        "passed": true,
+        "n_orders": 0,
+        "orders": [],
+        "last_status": "pending",
+        "last_line_statuses": [
+          "unit_mismatch"
+        ],
+        "error": null
+      },
+      {
+        "id": "h23",
+        "tag": "negative",
+        "kind": "clarify",
+        "turns": [
+          "একশো কেজি চিনি",
+          "হ্যাঁ"
+        ],
+        "expected": {
+          "kind": "clarify",
+          "line_status": "out_of_stock"
+        },
+        "passed": true,
+        "n_orders": 0,
+        "orders": [],
+        "last_status": "pending",
+        "last_line_statuses": [
+          "out_of_stock"
+        ],
+        "error": null
+      },
+      {
+        "id": "h24",
+        "tag": "negative",
+        "kind": "clarify",
+        "turns": [
+          "ek packet tel",
+          "haan"
+        ],
+        "expected": {
+          "kind": "clarify",
+          "line_status": "ambiguous"
+        },
+        "passed": true,
+        "n_orders": 0,
+        "orders": [],
+        "last_status": "pending",
+        "last_line_statuses": [
+          "ambiguous"
+        ],
+        "error": null
+      },
+      {
+        "id": "h25",
+        "tag": "negative",
+        "kind": "clarify",
+        "turns": [
+          "আমি আটা নেব",
+          "হ্যাঁ"
+        ],
+        "expected": {
+          "kind": "clarify",
+          "line_status": "bad_qty"
+        },
+        "passed": true,
+        "n_orders": 0,
+        "orders": [],
+        "last_status": "pending",
+        "last_line_statuses": [
+          "bad_qty"
+        ],
+        "error": null
+      },
+      {
+        "id": "h26",
+        "tag": "negative",
+        "kind": "clarify",
+        "turns": [
+          "ek bottle cold drink dena",
+          "haan"
+        ],
+        "expected": {
+          "kind": "clarify",
+          "line_status": "unknown"
+        },
+        "passed": true,
+        "n_orders": 0,
+        "orders": [],
+        "last_status": "pending",
+        "last_line_statuses": [
+          "unknown"
+        ],
+        "error": null
+      },
+      {
+        "id": "h27",
+        "tag": "cancel",
+        "kind": "cancel",
+        "turns": [
+          "তিন কেজি চাল দিন",
+          "না থাক"
+        ],
+        "expected": {
+          "kind": "cancel"
+        },
+        "passed": true,
+        "n_orders": 0,
+        "orders": [],
+        "last_status": "cancelled",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h28",
+        "tag": "cancel",
+        "kind": "cancel",
+        "turns": [
+          "ek kilo sugar",
+          "nahi nahi cancel kar do"
+        ],
+        "expected": {
+          "kind": "cancel"
+        },
+        "passed": true,
+        "n_orders": 0,
+        "orders": [],
+        "last_status": "cancelled",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h29",
+        "tag": "cancel",
+        "kind": "cancel",
+        "turns": [
+          "दो किलो आटा चाहिए",
+          "नहीं"
+        ],
+        "expected": {
+          "kind": "cancel"
+        },
+        "passed": true,
+        "n_orders": 0,
+        "orders": [],
+        "last_status": "cancelled",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h30",
+        "tag": "noise",
+        "kind": "none",
+        "turns": [
+          "দোকান কখন খুলবে"
+        ],
+        "expected": {
+          "kind": "none"
+        },
+        "passed": true,
+        "n_orders": 0,
+        "orders": [],
+        "last_status": "none",
+        "last_line_statuses": [],
+        "error": null
+      }
+    ]
+  },
+  "baseline": {
+    "summary": {
+      "mode": "baseline",
+      "order_accuracy": [
+        12,
+        19
+      ],
+      "task_completion": [
+        19,
+        19
+      ],
+      "clarification_correct": [
+        0,
+        7
+      ],
+      "unsafe_commits": [
+        8,
+        11
+      ],
+      "overall": [
+        13,
+        30
+      ],
+      "latency_p50": 0.8905630999943241,
+      "latency_p95": 2.7196620000177063
+    },
+    "results": [
+      {
+        "id": "h01",
+        "tag": "bengali",
+        "kind": "commit",
+        "turns": [
+          "ভাই তিন কেজি আলু আর এক কেজি পেঁয়াজ দিন",
+          "হ্যাঁ"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "potato",
+              "qty": 3,
+              "unit": "kg"
+            },
+            {
+              "product_id": "onion",
+              "qty": 1,
+              "unit": "kg"
+            }
+          ]
+        },
+        "passed": true,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "potato",
+              "qty": 3.0,
+              "unit": "kg"
+            },
+            {
+              "product_id": "onion",
+              "qty": 1.0,
+              "unit": "kg"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h02",
+        "tag": "bengali",
+        "kind": "commit",
+        "turns": [
+          "চার কেজি চাল একটু তাড়াতাড়ি দাও",
+          "ঠিক আছে"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "rice",
+              "qty": 4,
+              "unit": "kg"
+            }
+          ]
+        },
+        "passed": true,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "rice",
+              "qty": 4.0,
+              "unit": "kg"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h03",
+        "tag": "bengali",
+        "kind": "commit",
+        "turns": [
+          "আড়াই কেজি আটা আর আধা কেজি মুগ ডাল",
+          "হ্যাঁ"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "atta",
+              "qty": 2.5,
+              "unit": "kg"
+            },
+            {
+              "product_id": "moong_dal",
+              "qty": 0.5,
+              "unit": "kg"
+            }
+          ]
+        },
+        "passed": true,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "atta",
+              "qty": 2.5,
+              "unit": "kg"
+            },
+            {
+              "product_id": "moong_dal",
+              "qty": 0.5,
+              "unit": "kg"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h04",
+        "tag": "bengali",
+        "kind": "commit",
+        "turns": [
+          "দুটো সাবান আর তিন প্যাকেট দুধ লাগবে",
+          "হ্যাঁ"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "soap",
+              "qty": 2,
+              "unit": "piece"
+            },
+            {
+              "product_id": "milk",
+              "qty": 3,
+              "unit": "packet"
+            }
+          ]
+        },
+        "passed": true,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "soap",
+              "qty": 2.0,
+              "unit": "piece"
+            },
+            {
+              "product_id": "milk",
+              "qty": 3.0,
+              "unit": "packet"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h05",
+        "tag": "bengali",
+        "kind": "commit",
+        "turns": [
+          "আধা ডজন ডিম",
+          "হ্যাঁ"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "egg",
+              "qty": 6,
+              "unit": "piece"
+            }
+          ]
+        },
+        "passed": false,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "egg",
+              "qty": 0.5,
+              "unit": "piece"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h06",
+        "tag": "bengali",
+        "kind": "commit",
+        "turns": [
+          "দুই লিটার সরষের তেল আর পাঁচ কেজি চিনি দিয়ে দিন",
+          "হ্যাঁ"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "mustard_oil",
+              "qty": 2,
+              "unit": "litre"
+            },
+            {
+              "product_id": "sugar",
+              "qty": 5,
+              "unit": "kg"
+            }
+          ]
+        },
+        "passed": true,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "mustard_oil",
+              "qty": 2.0,
+              "unit": "litre"
+            },
+            {
+              "product_id": "sugar",
+              "qty": 5.0,
+              "unit": "kg"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h07",
+        "tag": "benglish",
+        "kind": "commit",
+        "turns": [
+          "dada 2 kilo chal ar 1 kilo nun den",
+          "haan"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "rice",
+              "qty": 2,
+              "unit": "kg"
+            },
+            {
+              "product_id": "salt",
+              "qty": 1,
+              "unit": "kg"
+            }
+          ]
+        },
+        "passed": true,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "rice",
+              "qty": 2.0,
+              "unit": "kg"
+            },
+            {
+              "product_id": "salt",
+              "qty": 1.0,
+              "unit": "kg"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h08",
+        "tag": "benglish",
+        "kind": "commit",
+        "turns": [
+          "ek packet biscuit ar duto sabun",
+          "ok"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "biscuit",
+              "qty": 1,
+              "unit": "packet"
+            },
+            {
+              "product_id": "soap",
+              "qty": 2,
+              "unit": "piece"
+            }
+          ]
+        },
+        "passed": true,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "biscuit",
+              "qty": 1.0,
+              "unit": "packet"
+            },
+            {
+              "product_id": "soap",
+              "qty": 2.0,
+              "unit": "piece"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h09",
+        "tag": "benglish",
+        "kind": "commit",
+        "turns": [
+          "arai kilo alu",
+          "haan"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "potato",
+              "qty": 2.5,
+              "unit": "kg"
+            }
+          ]
+        },
+        "passed": true,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "potato",
+              "qty": 2.5,
+              "unit": "kg"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h10",
+        "tag": "benglish",
+        "kind": "commit",
+        "turns": [
+          "tin kilo peyaj ar 500 gram chini",
+          "yes"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "onion",
+              "qty": 3,
+              "unit": "kg"
+            },
+            {
+              "product_id": "sugar",
+              "qty": 0.5,
+              "unit": "kg"
+            }
+          ]
+        },
+        "passed": false,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "onion",
+              "qty": 3.0,
+              "unit": "kg"
+            },
+            {
+              "product_id": "sugar",
+              "qty": 500.0,
+              "unit": "kg"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h11",
+        "tag": "benglish",
+        "kind": "commit",
+        "turns": [
+          "sunflower tel ek litre dao",
+          "haan"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "sunflower_oil",
+              "qty": 1,
+              "unit": "litre"
+            }
+          ]
+        },
+        "passed": false,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "mustard_oil",
+              "qty": 1.0,
+              "unit": "litre"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h12",
+        "tag": "hinglish",
+        "kind": "commit",
+        "turns": [
+          "bhaiya do kilo chawal aur ek kilo namak dena",
+          "haan"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "rice",
+              "qty": 2,
+              "unit": "kg"
+            },
+            {
+              "product_id": "salt",
+              "qty": 1,
+              "unit": "kg"
+            }
+          ]
+        },
+        "passed": true,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "rice",
+              "qty": 2.0,
+              "unit": "kg"
+            },
+            {
+              "product_id": "salt",
+              "qty": 1.0,
+              "unit": "kg"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h13",
+        "tag": "hinglish",
+        "kind": "commit",
+        "turns": [
+          "teen packet chai aur ek dozen anda",
+          "haan"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "tea",
+              "qty": 3,
+              "unit": "packet"
+            },
+            {
+              "product_id": "egg",
+              "qty": 12,
+              "unit": "piece"
+            }
+          ]
+        },
+        "passed": false,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "tea",
+              "qty": 3.0,
+              "unit": "packet"
+            },
+            {
+              "product_id": "egg",
+              "qty": 1.0,
+              "unit": "piece"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h14",
+        "tag": "hinglish",
+        "kind": "commit",
+        "turns": [
+          "मुझे एक किलो प्याज और दो किलो आलू चाहिए",
+          "हाँ"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "onion",
+              "qty": 1,
+              "unit": "kg"
+            },
+            {
+              "product_id": "potato",
+              "qty": 2,
+              "unit": "kg"
+            }
+          ]
+        },
+        "passed": true,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "onion",
+              "qty": 1.0,
+              "unit": "kg"
+            },
+            {
+              "product_id": "potato",
+              "qty": 2.0,
+              "unit": "kg"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h15",
+        "tag": "mixed",
+        "kind": "commit",
+        "turns": [
+          "amar লাগবে দুই kilo atta ar ek packet দুধ",
+          "হ্যাঁ"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "atta",
+              "qty": 2,
+              "unit": "kg"
+            },
+            {
+              "product_id": "milk",
+              "qty": 1,
+              "unit": "packet"
+            }
+          ]
+        },
+        "passed": true,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "atta",
+              "qty": 2.0,
+              "unit": "kg"
+            },
+            {
+              "product_id": "milk",
+              "qty": 1.0,
+              "unit": "packet"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h16",
+        "tag": "mixed",
+        "kind": "commit",
+        "turns": [
+          "দুই কেজি আটা না না তিন কেজি আটা দিন",
+          "হ্যাঁ"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "atta",
+              "qty": 3,
+              "unit": "kg"
+            }
+          ]
+        },
+        "passed": true,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "atta",
+              "qty": 3.0,
+              "unit": "kg"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h17",
+        "tag": "clarified",
+        "kind": "commit",
+        "turns": [
+          "এক লিটার তেল দাও ভাই",
+          "সানফ্লাওয়ারটাই দাও",
+          "হ্যাঁ"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "sunflower_oil",
+              "qty": 1,
+              "unit": "litre"
+            }
+          ]
+        },
+        "passed": false,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "mustard_oil",
+              "qty": 1.0,
+              "unit": "litre"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h18",
+        "tag": "clarified",
+        "kind": "commit",
+        "turns": [
+          "dui kilo dal",
+          "masur",
+          "haan"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "masoor_dal",
+              "qty": 2,
+              "unit": "kg"
+            }
+          ]
+        },
+        "passed": false,
+        "n_orders": 2,
+        "orders": [
+          [
+            {
+              "product_id": "masoor_dal",
+              "qty": 2.0,
+              "unit": "kg"
+            }
+          ],
+          [
+            {
+              "product_id": "masoor_dal",
+              "qty": 1.0,
+              "unit": "kg"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h19",
+        "tag": "clarified",
+        "kind": "commit",
+        "turns": [
+          "ek kilo atta aur do litre tel",
+          "sarson ka tel",
+          "haan"
+        ],
+        "expected": {
+          "kind": "commit",
+          "lines": [
+            {
+              "product_id": "atta",
+              "qty": 1,
+              "unit": "kg"
+            },
+            {
+              "product_id": "mustard_oil",
+              "qty": 2,
+              "unit": "litre"
+            }
+          ]
+        },
+        "passed": false,
+        "n_orders": 2,
+        "orders": [
+          [
+            {
+              "product_id": "atta",
+              "qty": 1.0,
+              "unit": "kg"
+            },
+            {
+              "product_id": "mustard_oil",
+              "qty": 2.0,
+              "unit": "litre"
+            }
+          ],
+          [
+            {
+              "product_id": "mustard_oil",
+              "qty": 1.0,
+              "unit": "litre"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h20",
+        "tag": "negative",
+        "kind": "clarify",
+        "turns": [
+          "পাঁচ কেজি ডাল দিন",
+          "হ্যাঁ"
+        ],
+        "expected": {
+          "kind": "clarify",
+          "line_status": "ambiguous"
+        },
+        "passed": false,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "masoor_dal",
+              "qty": 5.0,
+              "unit": "kg"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h21",
+        "tag": "negative",
+        "kind": "clarify",
+        "turns": [
+          "ভাই এক কেজি পনির দাও"
+        ],
+        "expected": {
+          "kind": "clarify",
+          "line_status": "unknown"
+        },
+        "passed": false,
+        "n_orders": 0,
+        "orders": [],
+        "last_status": "none",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h22",
+        "tag": "negative",
+        "kind": "clarify",
+        "turns": [
+          "do litre atta chahiye",
+          "haan"
+        ],
+        "expected": {
+          "kind": "clarify",
+          "line_status": "unit_mismatch"
+        },
+        "passed": false,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "atta",
+              "qty": 2.0,
+              "unit": "kg"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h23",
+        "tag": "negative",
+        "kind": "clarify",
+        "turns": [
+          "একশো কেজি চিনি",
+          "হ্যাঁ"
+        ],
+        "expected": {
+          "kind": "clarify",
+          "line_status": "out_of_stock"
+        },
+        "passed": false,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "sugar",
+              "qty": 100.0,
+              "unit": "kg"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h24",
+        "tag": "negative",
+        "kind": "clarify",
+        "turns": [
+          "ek packet tel",
+          "haan"
+        ],
+        "expected": {
+          "kind": "clarify",
+          "line_status": "ambiguous"
+        },
+        "passed": false,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "mustard_oil",
+              "qty": 1.0,
+              "unit": "litre"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h25",
+        "tag": "negative",
+        "kind": "clarify",
+        "turns": [
+          "আমি আটা নেব",
+          "হ্যাঁ"
+        ],
+        "expected": {
+          "kind": "clarify",
+          "line_status": "bad_qty"
+        },
+        "passed": false,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "atta",
+              "qty": 1.0,
+              "unit": "kg"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h26",
+        "tag": "negative",
+        "kind": "clarify",
+        "turns": [
+          "ek bottle cold drink dena",
+          "haan"
+        ],
+        "expected": {
+          "kind": "clarify",
+          "line_status": "unknown"
+        },
+        "passed": false,
+        "n_orders": 0,
+        "orders": [],
+        "last_status": "none",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h27",
+        "tag": "cancel",
+        "kind": "cancel",
+        "turns": [
+          "তিন কেজি চাল দিন",
+          "না থাক"
+        ],
+        "expected": {
+          "kind": "cancel"
+        },
+        "passed": false,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "rice",
+              "qty": 3.0,
+              "unit": "kg"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h28",
+        "tag": "cancel",
+        "kind": "cancel",
+        "turns": [
+          "ek kilo sugar",
+          "nahi nahi cancel kar do"
+        ],
+        "expected": {
+          "kind": "cancel"
+        },
+        "passed": false,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "sugar",
+              "qty": 1.0,
+              "unit": "kg"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h29",
+        "tag": "cancel",
+        "kind": "cancel",
+        "turns": [
+          "दो किलो आटा चाहिए",
+          "नहीं"
+        ],
+        "expected": {
+          "kind": "cancel"
+        },
+        "passed": false,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "atta",
+              "qty": 2.0,
+              "unit": "kg"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "h30",
+        "tag": "noise",
+        "kind": "none",
+        "turns": [
+          "দোকান কখন খুলবে"
+        ],
+        "expected": {
+          "kind": "none"
+        },
+        "passed": true,
+        "n_orders": 0,
+        "orders": [],
+        "last_status": "none",
+        "last_line_statuses": [],
+        "error": null
+      }
+    ]
+  }
+}
