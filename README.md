@@ -199,12 +199,32 @@ The project ships with an evaluation harness. The point is to measure whether th
 Before the last round of fixes the same set scored 98.3% (58/59). The one miss was a wrong order: "আড়াইশো গ্রাম নুন" (250 g of salt) was saved as 0.0025 kg. That led to the plausibility guard and the hundreds rule in the prompt.
 
 > ⚠️ **Read these numbers carefully.**
-> - This is a **development set**. The prompt and rules were adjusted after failures on these same cases, so 100% here is expected and does **not** mean 100% on new speech. A separate held-out set is planned and will be reported on its own.
+> - This is a **development set**. The prompt and rules were adjusted after failures on these same cases, so 100% here is expected and does **not** mean 100% on new speech. A separate held-out set is reported below.
 > - The evaluation is **text level**: it starts from the transcript. Speech recognition errors, noise and word error rate are measured separately (see the roadmap).
 > - The baseline is intentionally simple. It shows what the safety layers add, not what a good alternative would score.
 > - Results were produced with `openai/gpt-oss-20b` on Groq. Other models may differ.
 
-Full per-case results are in [`backend/evaluation/results.json`](backend/evaluation/results.json).
+**Results on a held-out set** (30 cases, text level, run once)
+
+The held-out set was written after the development rounds and was **not used to tune** the prompt, matcher or rules.
+
+| Metric | Improved | Baseline |
+|---|---|---|
+| Order exact-match accuracy | 89.5% (17/19) | 63.2% (12/19) |
+| Task completion | 89.5% (17/19) | 100% (19/19) |
+| Correct clarification | **100%** (7/7) | 0% (0/7) |
+| Unsafe commits (target 0) | **0 of 11** | 8 of 11 |
+| Overall pass | **93.3%** (28/30) | 43.3% (13/30) |
+| LLM + rules latency per turn | p50 0.90 s, p95 2.73 s | |
+
+Every order the improved pipeline saved was correct (17 of 17). Its two misses were cases where it **asked a question instead of saving**:
+
+- "sunflower tel ek litre dao": the model dropped the word "sunflower", so the app asked "which oil?" although the customer had said.
+- After "এক লিটার তেল", the answer "সানফ্লাওয়ারটাই দাও" was not recognised as sunflower oil, so the app said it could not find the item.
+
+> ⚠️ **Caveats.** Only 30 cases, so the result is imprecise (93.3% corresponds to roughly 79% to 98% at 95% confidence). The cases were written by the project's AI assistant after it had seen the development failures, so they are not fully independent. The evaluation is text level and uses a single LLM.
+
+Full per-case results are in [`backend/evaluation/results.json`](backend/evaluation/results.json) (development) and [`backend/evaluation/results_heldout.json`](backend/evaluation/results_heldout.json) (held-out).
 
 <details>
 <summary><b>What the evaluation found (and fixed)</b></summary>
@@ -368,6 +388,7 @@ kiranavoice/
 Honest notes, so nobody is surprised:
 
 - **Speech recognition is not perfect.** In early tests the first word of a recording was sometimes dropped, which was traced to the browser's microphone, not the API. A full audio-level accuracy test has not been completed yet.
+- **Over-asking.** On held-out cases the app sometimes asks a question it did not need to (for example when the model drops a variety word such as "sunflower", or when a clarification answer carries extra suffix words). These failures are safe, since nothing wrong is saved, but they cost the shopkeeper a turn.
 - **Rate limits.** On Groq's free tier, this prompt allows roughly 8 order requests per minute. A busy public demo would hit that. Requests are retried briefly and then fail with an error message.
 - **Sample catalogue.** 15 demo products with illustrative prices and stock. There is no catalogue editor.
 - **Single store, no login.** Sessions are held in memory and are lost when the server restarts.
@@ -382,7 +403,7 @@ Honest notes, so nobody is surprised:
 - [x] Atomic SQLite orders and live stock
 - [x] Evaluation harness with baseline comparison
 - [ ] Audio-level evaluation (recorded and noisy speech, word error rate, end-to-end accuracy)
-- [ ] Held-out test set reported separately from the development set
+- [x] Held-out test set reported separately from the development set
 - [ ] Evaluation dashboard tab in the UI
 - [ ] Orders and stock tabs in the UI
 - [ ] Shorter prompt and response caching to ease rate limits
