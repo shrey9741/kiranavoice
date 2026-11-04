@@ -57,3 +57,5 @@
 {"id": "c57", "tag": "noise", "turns": ["হ্যাঁ"], "expect": {"kind": "none"}}
 {"id": "c58", "tag": "noise", "turns": ["আজকে আবহাওয়া কেমন"], "expect": {"kind": "none"}}
 {"id": "c59", "tag": "noise", "turns": ["হ্যালো"], "expect": {"kind": "none"}}
+{"id": "c60", "tag": "negative", "turns": ["দুই গ্রাম চিনি", "হ্যাঁ"], "expect": {"kind": "clarify", "line_status": "implausible_qty"}}
+{"id": "c61", "tag": "negative", "turns": ["আধা সাবান", "হ্যাঁ"], "expect": {"kind": "clarify", "line_status": "implausible_qty"}}

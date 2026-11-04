@@ -94,6 +94,10 @@ add("noise", [YES_BN], "none")
 add("noise", ["আজকে আবহাওয়া কেমন"], "none")
 add("noise", ["হ্যালো"], "none")
 
+# --- implausible quantities must be questioned, not saved -------------------------------
+add("negative", ["দুই গ্রাম চিনি", YES_BN], "clarify", line_status="implausible_qty")
+add("negative", ["আধা সাবান", YES_BN], "clarify", line_status="implausible_qty")
+
 if __name__ == "__main__":
     out = Path(__file__).parent / "cases.jsonl"
     with out.open("w", encoding="utf-8") as f:
