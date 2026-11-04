@@ -4,6 +4,11 @@ from .matcher import Match, match
 from .speech_text import UNIT_BN
 
 
+# Smallest believable order per unit. A speech or LLM slip such as "250 g" read as
+# "2.5 g" must be questioned, not saved.
+MIN_QTY = {"kg": 0.05, "litre": 0.05}
+
+
 def to_product_unit(qty: float, unit: str | None, product_unit: str) -> float | None:
     """Convert qty to the product's unit, or None if the units are incompatible."""
     if unit is None or unit == product_unit:
@@ -56,6 +61,13 @@ def build_proposal(ex: Extraction, products=None, overrides: dict[int, str] | No
                     line["status"] = "unit_mismatch"
                     questions.append(
                         f"{p.name_bn} {UNIT_BN[p.unit]} হিসেবে বিক্রি হয়। কতটা লাগবে?")
+                elif qty < MIN_QTY.get(p.unit, 0):
+                    line["status"] = "implausible_qty"
+                    questions.append(
+                        f"{p.name_bn} {qty:g} {UNIT_BN[p.unit]} খুব কম। কতটা লাগবে?")
+                elif p.unit in ("piece", "packet") and qty != int(qty):
+                    line["status"] = "implausible_qty"
+                    questions.append(f"{p.name_bn} কতগুলো লাগবে?")
                 elif qty > p.stock:
                     line["status"] = "out_of_stock"
                     questions.append(

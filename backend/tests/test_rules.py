@@ -69,3 +69,23 @@ def test_parse_extraction_handles_code_fences():
 def test_parse_extraction_rejects_garbage():
     with pytest.raises(ValueError):
         parse_extraction("not json")
+
+
+def test_tiny_quantity_is_questioned_not_saved():
+    r = build_proposal(order(("নুন", 2.5, "g")))  # "250 g" misread as 2.5 g
+    assert r["lines"][0]["status"] == "implausible_qty" and not r["can_confirm"]
+    assert r["questions"] and "খুব কম" in r["questions"][0]
+
+
+def test_normal_small_quantities_still_pass():
+    assert build_proposal(order(("নুন", 250, "g")))["can_confirm"]
+    assert build_proposal(order(("চিনি", 0.5, "kg")))["can_confirm"]
+
+
+def test_half_a_piece_is_questioned():
+    r = build_proposal(order(("সাবান", 0.5, "piece")))
+    assert r["lines"][0]["status"] == "implausible_qty" and not r["can_confirm"]
+
+
+def test_half_a_dozen_eggs_is_fine():
+    assert build_proposal(order(("ডিম", 0.5, "dozen")))["can_confirm"]
