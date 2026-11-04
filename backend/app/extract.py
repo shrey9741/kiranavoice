@@ -36,7 +36,7 @@ Rules:
 - intent "confirm": the speaker says yes/ok (হ্যাঁ, ঠিক আছে, haan, yes, confirm). intent "reject": no/cancel (না, বাদ দাও, cancel). intent "order": products are requested. Otherwise "other".
 - phrase: the product words copied character for character from the transcript. Never transliterate between scripts: Latin letters stay Latin, Devanagari stays Devanagari, Bengali stays Bengali ("chawal" stays "chawal", never "চাওয়াল"). Do NOT translate, correct, or pick a specific brand or variety. If the speaker says only "তেল", the phrase is "তেল".
 - The phrase is an empty string ONLY when no product word is spoken at all (for example the answer "পাঁচ লিটার" to "how much?"); then intent is still "order" and items has ONE item with that empty phrase. If any product word is present ("এক লিটার তেল" has the product "তেল"), the phrase is that product word. Never return intent "other" for a quantity.
-- qty: the number exactly as spoken, in the spoken unit. Do NOT convert units yourself: "এক ডজন ডিম" is qty 1, unit "dozen"; "পাঁচশো গ্রাম" is qty 500, unit "g"; "আধা কেজি" is qty 0.5, unit "kg". A count word such as এক/একটা/একটি/ek/ek ta means 1, so qty is never null when one is spoken. Convert number words: এক=1, দুই/দু=2, তিন=3, চার=4, পাঁচ=5, ছয়=6, সাত=7, আট=8, নয়=9, দশ=10, আধা/আধ=0.5, দেড়=1.5, আড়াই=2.5, সাড়ে তিন=3.5, সাড়ে চার=4.5. Hindi: ek=1, do=2, teen=3, char=4, paanch=5, aadha=0.5, dedh=1.5, dhai=2.5. If no quantity is stated, use null. Never guess a quantity.
+- qty: the number exactly as spoken, in the spoken unit. Do NOT convert units yourself: "এক ডজন ডিম" is qty 1, unit "dozen"; "পাঁচশো গ্রাম" is qty 500, unit "g"; "আধা কেজি" is qty 0.5, unit "kg". A count word such as এক/একটা/একটি/ek/ek ta means 1, so qty is never null when one is spoken. Convert number words: এক=1, দুই/দু=2, তিন=3, চার=4, পাঁচ=5, ছয়=6, সাত=7, আট=8, নয়=9, দশ=10, আধা/আধ=0.5, দেড়=1.5, আড়াই=2.5, সাড়ে তিন=3.5, সাড়ে চার=4.5. শো/শ means hundred and হাজার thousand: পাঁচশো=500, আড়াইশো=250, দুইশো=200, সাড়ে তিনশো=350, এক হাজার=1000. Hindi: ek=1, do=2, teen=3, char=4, paanch=5, aadha=0.5, dedh=1.5, dhai=2.5. If no quantity is stated, use null. Never guess a quantity.
 - unit: one of "kg", "g", "litre", "ml", "piece", "packet", "dozen", or null if not stated. কেজি/কিলো/kilo/kg = kg; গ্রাম = g; লিটার/litre/ltr = litre; পিস/টা/টি = piece; প্যাকেট = packet; ডজন = dozen.
 - Ignore filler words (কালকে, আমার, লাগবে, অর্ডার করে রাখো, নিয়ে যাব). Do not invent items that were not said.
 - If nothing relevant was said, return {"intent": "other", "items": []}.
@@ -54,6 +54,7 @@ Examples:
 "এক প্যাকেট চা পাতা" -> {"intent":"order","items":[{"phrase":"চা পাতা","qty":1,"unit":"packet"}]}
 "এক ডজন ডিম" -> {"intent":"order","items":[{"phrase":"ডিম","qty":1,"unit":"dozen"}]}
 "পাঁচশো গ্রাম আটা" -> {"intent":"order","items":[{"phrase":"আটা","qty":500,"unit":"g"}]}
+"আড়াইশো গ্রাম নুন" -> {"intent":"order","items":[{"phrase":"নুন","qty":250,"unit":"g"}]}
 "আমার চিনি লাগবে" -> {"intent":"order","items":[{"phrase":"চিনি","qty":null,"unit":null}]}
 """
 

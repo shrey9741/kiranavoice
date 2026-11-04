@@ -88,3 +88,8 @@ def test_errored_cases_are_excluded_from_metrics(capsys):
 def test_prompt_forbids_transliteration_and_dropping_the_product():
     from app.extract import SYSTEM
     assert "Never transliterate" in SYSTEM and "ONLY when no product word" in SYSTEM
+
+
+def test_prompt_knows_hundreds():
+    from app.extract import SYSTEM
+    assert "আড়াইশো=250" in SYSTEM
