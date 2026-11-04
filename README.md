@@ -185,19 +185,21 @@ The project ships with an evaluation harness. The point is to measure whether th
   - **Baseline**: a deliberately naive version that takes the first catalogue match and saves immediately, with no questions, no unit or stock checks and no confirmation.
 - **Metrics:** order exact-match accuracy, task completion, correct clarification rate, **unsafe commits** (anything saved when nothing should be), and latency per turn.
 
-**Results on the development set** (59 cases, Nov 3 run, text level)
+**Results on the development set** (61 cases, Nov 3 run, text level)
 
 | Metric | Improved | Baseline |
 |---|---|---|
-| Order exact-match accuracy | **97.6%** (41/42) | 76.2% (32/42) |
+| Order exact-match accuracy | **100%** (42/42) | 76.2% (32/42) |
 | Task completion | 100% (42/42) | 100% (42/42) |
-| Correct clarification | **100%** (11/11) | 0% (0/11) |
-| Unsafe commits (target 0) | **0 of 17** | 13 of 17 |
-| Overall pass | **98.3%** (58/59) | 59.3% (35/59) |
-| LLM + rules latency per turn | p50 0.93 s, p95 1.65 s | |
+| Correct clarification | **100%** (13/13) | 0% (0/13) |
+| Unsafe commits (target 0) | **0 of 19** | 15 of 19 |
+| Overall pass | **100%** (61/61) | 57.4% (35/61) |
+| LLM + rules latency per turn | p50 0.88 s, p95 1.36 s | |
+
+Before the last round of fixes the same set scored 98.3% (58/59). The one miss was a wrong order: "আড়াইশো গ্রাম নুন" (250 g of salt) was saved as 0.0025 kg. That led to the plausibility guard and the hundreds rule in the prompt.
 
 > ⚠️ **Read these numbers carefully.**
-> - This is a **development set**. The prompt and rules were adjusted after failures on these same cases, so the scores are optimistic. A separate held-out set is planned and will be reported on its own.
+> - This is a **development set**. The prompt and rules were adjusted after failures on these same cases, so 100% here is expected and does **not** mean 100% on new speech. A separate held-out set is planned and will be reported on its own.
 > - The evaluation is **text level**: it starts from the transcript. Speech recognition errors, noise and word error rate are measured separately (see the roadmap).
 > - The baseline is intentionally simple. It shows what the safety layers add, not what a good alternative would score.
 > - Results were produced with `openai/gpt-oss-20b` on Groq. Other models may differ.
