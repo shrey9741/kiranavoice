@@ -21,6 +21,7 @@ from pathlib import Path
 HERE = Path(__file__).parent
 CACHE_PATH = HERE / ".llm_cache.json"
 CASES_PATH = HERE / "cases.jsonl"
+HELDOUT_PATH = HERE / "heldout_cases.jsonl"
 
 
 def setup_env(db_path: str | None = None) -> None:
@@ -184,7 +185,9 @@ async def main_async(args) -> None:
     from app import db
     db.init_db()
 
-    cases = [json.loads(l) for l in CASES_PATH.read_text(encoding="utf-8").splitlines() if l.strip()]
+    heldout = args.cases == "heldout"
+    cases_path = HELDOUT_PATH if heldout else CASES_PATH
+    cases = [json.loads(l) for l in cases_path.read_text(encoding="utf-8").splitlines() if l.strip()]
     if args.only:
         cases = [c for c in cases if c["id"] in args.only.split(",")]
     if args.limit:
@@ -226,13 +229,16 @@ async def main_async(args) -> None:
                 print(f"    got: orders={r['orders']} status={r['last_status']} "
                       f"lines={r['last_line_statuses']} {r['error'] or ''}")
 
-    (HERE / "results.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
-    print("\nSaved evaluation/results.json")
+    out_name = "results_heldout.json" if heldout else "results.json"
+    (HERE / out_name).write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"\nSaved evaluation/{out_name}")
 
 
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--mode", choices=["improved", "baseline", "both"], default="both")
+    ap.add_argument("--cases", choices=["dev", "heldout"], default="dev",
+                    help="dev = cases.jsonl (tuned on), heldout = heldout_cases.jsonl (never tuned on)")
     ap.add_argument("--only", help="comma-separated case ids, e.g. c01,c02")
     ap.add_argument("--limit", type=int)
     asyncio.run(main_async(ap.parse_args()))

@@ -3,7 +3,7 @@ Uses the cache, so it costs nothing.   python -m evaluation.show_case c28 c43"""
 import json
 import sys
 
-from evaluation.run_eval import CACHE_PATH, CASES_PATH, _key, setup_env
+from evaluation.run_eval import CACHE_PATH, CASES_PATH, HELDOUT_PATH, _key, setup_env
 
 
 def main() -> None:
@@ -11,7 +11,10 @@ def main() -> None:
     from app.matcher import match
 
     ids = sys.argv[1:]
-    cases = [json.loads(l) for l in CASES_PATH.read_text(encoding="utf-8").splitlines() if l.strip()]
+    cases = []
+    for path in (CASES_PATH, HELDOUT_PATH):
+        if path.exists():
+            cases += [json.loads(l) for l in path.read_text(encoding="utf-8").splitlines() if l.strip()]
     cache = json.loads(CACHE_PATH.read_text(encoding="utf-8")) if CACHE_PATH.exists() else {}
     for c in cases:
         if ids and c["id"] not in ids:
