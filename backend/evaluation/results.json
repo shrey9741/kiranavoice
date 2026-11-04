@@ -3,7 +3,7 @@
     "summary": {
       "mode": "improved",
       "order_accuracy": [
-        41,
+        42,
         42
       ],
       "task_completion": [
@@ -11,19 +11,19 @@
         42
       ],
       "clarification_correct": [
-        11,
-        11
+        13,
+        13
       ],
       "unsafe_commits": [
         0,
-        17
+        19
       ],
       "overall": [
-        58,
-        59
+        61,
+        61
       ],
-      "latency_p50": 0.9280799999833107,
-      "latency_p95": 1.6516304000106174
+      "latency_p50": 0.8810718000167981,
+      "latency_p95": 1.3554771000053734
     },
     "results": [
       {
@@ -613,13 +613,13 @@
             }
           ]
         },
-        "passed": false,
+        "passed": true,
         "n_orders": 1,
         "orders": [
           [
             {
               "product_id": "salt",
-              "qty": 0.0025,
+              "qty": 0.25,
               "unit": "kg"
             }
           ]
@@ -1989,6 +1989,48 @@
         "last_status": "none",
         "last_line_statuses": [],
         "error": null
+      },
+      {
+        "id": "c60",
+        "tag": "negative",
+        "kind": "clarify",
+        "turns": [
+          "দুই গ্রাম চিনি",
+          "হ্যাঁ"
+        ],
+        "expected": {
+          "kind": "clarify",
+          "line_status": "implausible_qty"
+        },
+        "passed": true,
+        "n_orders": 0,
+        "orders": [],
+        "last_status": "pending",
+        "last_line_statuses": [
+          "implausible_qty"
+        ],
+        "error": null
+      },
+      {
+        "id": "c61",
+        "tag": "negative",
+        "kind": "clarify",
+        "turns": [
+          "আধা সাবান",
+          "হ্যাঁ"
+        ],
+        "expected": {
+          "kind": "clarify",
+          "line_status": "implausible_qty"
+        },
+        "passed": true,
+        "n_orders": 0,
+        "orders": [],
+        "last_status": "pending",
+        "last_line_statuses": [
+          "implausible_qty"
+        ],
+        "error": null
       }
     ]
   },
@@ -2005,18 +2047,18 @@
       ],
       "clarification_correct": [
         0,
-        11
+        13
       ],
       "unsafe_commits": [
-        13,
-        17
+        15,
+        19
       ],
       "overall": [
         35,
-        59
+        61
       ],
-      "latency_p50": 0.9211404999950901,
-      "latency_p95": 1.6394473999971524
+      "latency_p50": 0.8742641999851912,
+      "latency_p95": 1.349375499994494
     },
     "results": [
       {
@@ -2578,7 +2620,7 @@
           [
             {
               "product_id": "salt",
-              "qty": 2.5,
+              "qty": 250.0,
               "unit": "kg"
             }
           ]
@@ -4009,6 +4051,60 @@
         "n_orders": 0,
         "orders": [],
         "last_status": "none",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "c60",
+        "tag": "negative",
+        "kind": "clarify",
+        "turns": [
+          "দুই গ্রাম চিনি",
+          "হ্যাঁ"
+        ],
+        "expected": {
+          "kind": "clarify",
+          "line_status": "implausible_qty"
+        },
+        "passed": false,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "sugar",
+              "qty": 2.0,
+              "unit": "kg"
+            }
+          ]
+        ],
+        "last_status": "committed",
+        "last_line_statuses": [],
+        "error": null
+      },
+      {
+        "id": "c61",
+        "tag": "negative",
+        "kind": "clarify",
+        "turns": [
+          "আধা সাবান",
+          "হ্যাঁ"
+        ],
+        "expected": {
+          "kind": "clarify",
+          "line_status": "implausible_qty"
+        },
+        "passed": false,
+        "n_orders": 1,
+        "orders": [
+          [
+            {
+              "product_id": "soap",
+              "qty": 0.5,
+              "unit": "piece"
+            }
+          ]
+        ],
+        "last_status": "committed",
         "last_line_statuses": [],
         "error": null
       }
