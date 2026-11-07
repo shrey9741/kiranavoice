@@ -3,7 +3,6 @@ from dotenv import load_dotenv
 load_dotenv()  # must run before importing gnani
 
 import os
-import pathlib
 import time
 
 from fastapi import FastAPI, Form, HTTPException, UploadFile
@@ -16,13 +15,23 @@ from .extract import extract
 
 db.init_db()
 
+# Comma-separated list of allowed browser origins. Set ALLOWED_ORIGINS on the host to the
+# live frontend address, for example https://kiranavoice.vercel.app
+ORIGINS = [o.strip() for o in os.environ.get(
+    "ALLOWED_ORIGINS", "http://localhost:3000,http://127.0.0.1:3000").split(",") if o.strip()]
+
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_origins=ORIGINS,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+@app.get("/health")
+async def health():
+    return {"ok": True}
 
 
 @app.post("/api/transcribe")
@@ -40,7 +49,6 @@ async def voice_order(
     """Audio -> transcript -> one conversation turn, with per-stage timings."""
     t0 = time.perf_counter()
     wav = await to_wav16k(await audio.read())
-    pathlib.Path("last.wav").write_bytes(wav)  # debug only, remove before deploying
     t1 = time.perf_counter()
     stt = await gnani.stt(wav, language_code)
     t2 = time.perf_counter()
