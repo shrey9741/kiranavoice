@@ -20,6 +20,8 @@ const hand = Tiro_Bangla({
 export const metadata: Metadata = {
   title: "KiranaVoice",
   description: "Voice-first order assistant for neighbourhood kirana stores",
+  // Stops Chrome's automatic translation, which breaks live updates in this app
+  other: { google: "notranslate" },
 };
 
 export const viewport: Viewport = {
@@ -30,7 +32,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="bn" className={`${ui.variable} ${hand.variable}`}>
+    <html lang="bn" translate="no" className={`${ui.variable} ${hand.variable}`}>
       <body>{children}</body>
     </html>
   );

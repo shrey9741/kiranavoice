@@ -41,7 +41,7 @@ export default function LedgerOrder({
 
       <div className="row relative grid grid-cols-[1fr_4.5rem] gap-3 border-t-4 border-double border-[var(--ink)] text-xl">
         <span>{labels.total}</span>
-        <span className="text-right tabular-nums">₹{p.total}</span>
+        <span className="text-right tabular-nums">{`₹${p.total}`}</span>
         {p.status === "confirmed" && (
           <div className="stamp absolute right-[6.5rem] top-[-2px]">{labels.confirmed}</div>
         )}
